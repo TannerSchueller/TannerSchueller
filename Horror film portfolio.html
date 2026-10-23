@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="color-scheme" content="dark">
+<title>Your Name</title>
+<meta name="description" content="Portfolio of Your Name: video editing, art and horror.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Courier+Prime:wght@400;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#0d0b09;--panel:#1a1612;--line:#3a2f24;--ink:#eadfcd;--muted:#a39784;--orange:#ff6a13;--rust:#7a230c;
+--display:"Anton",Impact,"Arial Narrow",sans-serif;--body:"Courier Prime","Courier New",monospace;
+--holes:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='26' height='14'><rect x='6' y='3' width='14' height='8' rx='2' fill='%230d0b09'/></svg>")}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font:1.05rem/1.7 var(--body);min-height:100vh;display:flex;flex-direction:column}
+body::before{content:"";position:fixed;inset:0;pointer-events:none;z-index:50;background:radial-gradient(ellipse at center,transparent 55%,rgba(0,0,0,.7) 100%)}
+body::after{content:"";position:fixed;inset:0;pointer-events:none;z-index:51;opacity:.08;background:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='200' height='200'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2'/></filter><rect width='100%' height='100%' filter='url(%23n)'/></svg>")}
+a{color:var(--orange)}
+a:focus-visible{outline:3px solid var(--orange);outline-offset:3px}
+h1,h2,h3{font-family:var(--display);font-weight:400;letter-spacing:.03em;line-height:1.05;margin:0}
+.wrap{max-width:64rem;margin:0 auto;padding:0 1.5rem}
+main{flex:1}
+.strip::before,.strip::after{content:"";display:block;height:14px;background:var(--holes) repeat-x}
+header.site{background:var(--panel);border-bottom:1px solid var(--line)}
+.bar{display:flex;justify-content:space-between;align-items:center;gap:1rem;flex-wrap:wrap;padding:.6rem 1.5rem;max-width:64rem;margin:0 auto}
+.logo{font:1.5rem var(--display);letter-spacing:.06em;text-decoration:none;color:var(--ink)}
+nav{display:flex;flex-wrap:wrap;gap:.5rem}
+nav a{font:1rem var(--display);letter-spacing:.08em;text-decoration:none;color:var(--ink);border:1px solid var(--line);padding:.35rem .9rem}
+nav a:hover{color:var(--orange);border-color:var(--orange)}
+nav a[aria-current=page]{background:var(--orange);border-color:var(--orange);color:var(--bg)}
+.hero{display:grid;grid-template-columns:1.2fr .8fr;gap:2rem;align-items:center;padding:clamp(2.5rem,8vw,5rem) 0}
+h1.title{font-size:clamp(3.5rem,12vw,8rem);line-height:.95;text-transform:uppercase;text-shadow:0 0 30px rgba(255,106,19,.4);animation:flicker 2s linear 1}
+.hero p{font-size:1.2rem;color:var(--muted);max-width:30rem;margin:1.25rem 0 1.75rem}
+.reel{width:min(100%,24rem);justify-self:center;color:var(--orange);animation:spin 60s linear infinite}
+@keyframes spin{to{transform:rotate(360deg)}}
+@keyframes flicker{0%,18%,22%,60%,64%,100%{opacity:1}20%,62%{opacity:.2}21%{opacity:.8}}
+.btn{display:inline-block;border:2px solid var(--orange);color:var(--orange);padding:.5rem 1.25rem;font:1.1rem var(--display);letter-spacing:.08em;text-decoration:none;margin:0 .75rem .75rem 0}
+.btn:hover,.btn.solid{background:var(--orange);color:var(--bg)}
+.btn.solid:hover{background:transparent;color:var(--orange)}
+h1.page-title{font-size:clamp(2.75rem,9vw,5.5rem);text-transform:uppercase;padding-top:clamp(2rem,6vw,4rem);text-shadow:0 0 24px rgba(255,106,19,.3)}
+.lede{color:var(--muted);max-width:36rem;margin:1rem 0 2.5rem}
+section{padding:2.5rem 0}
+h2{font-size:2rem;margin-bottom:1.5rem;color:var(--orange)}
+.frames{display:grid;grid-template-columns:repeat(auto-fit,minmax(15rem,1fr));gap:1.5rem}
+.frame{display:block;background:var(--panel);border:1px solid var(--line);color:var(--ink);text-decoration:none}
+a.frame:hover{border-color:var(--orange)}
+a.frame:hover h3{color:var(--orange)}
+.frame .cap{padding:.9rem 1rem 1rem}
+.frame h3{font-size:1.4rem;margin-bottom:.25rem}
+.frame p{margin:0;color:var(--muted);font-size:.95rem;line-height:1.5}
+.shot{position:relative;aspect-ratio:16/9;display:grid;place-items:center;background:linear-gradient(135deg,var(--rust),var(--bg));color:var(--muted);font-size:.9rem}
+.shot.tall{aspect-ratio:4/5}
+.shot.video::after{content:"";border-left:28px solid var(--orange);border-top:18px solid transparent;border-bottom:18px solid transparent}
+.frame iframe{display:block;width:100%;aspect-ratio:16/9;border:0}
+.frame img{display:block;width:100%;aspect-ratio:4/5;object-fit:cover}
+.split{display:grid;grid-template-columns:18rem 1fr;gap:2.5rem;align-items:start}
+.split p{margin:0 0 1rem;max-width:38rem}
+.films{list-style:none;margin:0;padding:0}
+.films li{border-top:1px solid var(--line);padding:.5rem 0}
+.credit{display:grid;grid-template-columns:11rem 1fr;gap:1rem;border-top:1px solid var(--line);padding:1.25rem 0}
+.credit .when{color:var(--orange)}
+.credit h3{font-size:1.5rem}
+.credit p{margin:.25rem 0 0;color:var(--muted)}
+.skills{display:flex;flex-wrap:wrap;gap:.5rem;list-style:none;margin:0;padding:0}
+.skills li{border:1px solid var(--line);padding:.15rem .8rem;font-size:.95rem}
+.email{font:clamp(1.6rem,6vw,3rem)/1.2 var(--display);letter-spacing:.03em;word-break:break-word}
+.links{display:flex;gap:1.5rem;flex-wrap:wrap;margin:1.5rem 0 0;padding:0;list-style:none}
+footer{background:var(--panel);border-top:1px solid var(--line);color:var(--muted);font-size:.9rem;margin-top:3rem}
+footer p{margin:0;padding:.9rem 1.5rem;max-width:64rem;margin-inline:auto}
+@media(max-width:760px){.hero,.split{grid-template-columns:1fr}.reel{width:min(70%,16rem)}.credit{grid-template-columns:1fr;gap:.25rem}}
+@media(prefers-reduced-motion:reduce){.reel,h1.title{animation:none}html{scroll-behavior:auto}}
+
+.page[hidden]{display:none}
+body{padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+</style>
+</head>
+<body>
+<header class="site strip"><div class="bar"><a class="logo" href="#home">Your Name</a><nav aria-label="Main"><a href="#home">Home</a><a href="#editing">Editing</a><a href="#art">Art</a><a href="#about">About Me</a><a href="#resume">Resume</a><a href="#contact">Contact</a></nav></div></header>
+<main>
+<div class="page wrap" id="home">
+<section class="hero"><div><h1 class="title">Your Name</h1>
+<p>Video editor and artist with a soft spot for things that go bump in the night. I cut tension, fear and the slow reveal.</p>
+<a class="btn solid" href="#editing">Watch my edits</a><a class="btn" href="#art">See my art</a></div><svg class="reel" viewBox="0 0 200 200" role="img" aria-label="Film reel"><circle cx="100" cy="100" r="94" fill="#1a1612" stroke="currentColor" stroke-width="5"/><circle cx="100" cy="100" r="80" fill="none" stroke="#3a2f24" stroke-width="2"/><g fill="#0d0b09" stroke="currentColor" stroke-width="2"><circle cx="155" cy="100" r="20"/><circle cx="127.5" cy="147.6" r="20"/><circle cx="72.5" cy="147.6" r="20"/><circle cx="45" cy="100" r="20"/><circle cx="72.5" cy="52.4" r="20"/><circle cx="127.5" cy="52.4" r="20"/></g><circle cx="100" cy="100" r="14" fill="currentColor"/><circle cx="100" cy="100" r="5" fill="#0d0b09"/></svg></section>
+<section><h2>Now showing</h2><div class="frames"><a class="frame strip" href="#editing"><div class="shot video"></div><div class="cap"><h3>Editing</h3><p>Trailers, shorts and scares, cut to the beat.</p></div></a><a class="frame strip" href="#art"><div class="shot tall">Your image</div><div class="cap"><h3>Art</h3><p>Drawings and paintings from the dark side.</p></div></a><a class="frame strip" href="#about"><div class="shot tall">Your image</div><div class="cap"><h3>About Me</h3><p>Who’s behind the camera.</p></div></a></div></section>
+</div>
+<div class="page wrap" id="editing">
+<h1 class="page-title">Editing</h1><p class="lede">A reel of recent cuts. Pacing, sound and a well-timed jump scare are my favorite tools.</p>
+<!-- To show a real video, replace the .shot div inside a frame with: <iframe src="https://www.youtube.com/embed/VIDEO_ID" title="Video title" allowfullscreen></iframe> -->
+<div class="frames"><div class="frame strip"><div class="shot video"></div><div class="cap"><h3>Short Film Title</h3><p>Horror short, 4 min. Edit, color and sound.</p></div></div><div class="frame strip"><div class="shot video"></div><div class="cap"><h3>Trailer Title</h3><p>Fan trailer, 2 min. Edit and sound design.</p></div></div><div class="frame strip"><div class="shot video"></div><div class="cap"><h3>Music Video Title</h3><p>Cut to the beat, 3 min.</p></div></div><div class="frame strip"><div class="shot video"></div><div class="cap"><h3>Reel 2026</h3><p>All my best work in 60 seconds.</p></div></div></div>
+</div>
+<div class="page wrap" id="art">
+<h1 class="page-title">Art</h1><p class="lede">Drawings, paintings and digital work. Mostly shadows.</p>
+<!-- To show a real image, replace the .shot div inside a frame with: <img src="images/your-piece.jpg" alt="Describe the artwork"> -->
+<div class="frames"><div class="frame strip"><div class="shot tall">Your image</div><div class="cap"><h3>Piece Title 1</h3><p>Ink on paper</p></div></div><div class="frame strip"><div class="shot tall">Your image</div><div class="cap"><h3>Piece Title 2</h3><p>Acrylic on canvas</p></div></div><div class="frame strip"><div class="shot tall">Your image</div><div class="cap"><h3>Piece Title 3</h3><p>Digital</p></div></div><div class="frame strip"><div class="shot tall">Your image</div><div class="cap"><h3>Piece Title 4</h3><p>Charcoal</p></div></div><div class="frame strip"><div class="shot tall">Your image</div><div class="cap"><h3>Piece Title 5</h3><p>Mixed media</p></div></div><div class="frame strip"><div class="shot tall">Your image</div><div class="cap"><h3>Piece Title 6</h3><p>Digital</p></div></div></div>
+</div>
+<div class="page wrap" id="about">
+<h1 class="page-title">About Me</h1><section class="split"><div class="frame strip"><div class="shot tall">Your photo</div></div><div>
+<p>Write a short intro here: who you are, where you’re based and how you got into editing and art.</p>
+<p>Say what you’re looking for next, whether that’s freelance edits, a studio job or horror collaborations.</p>
+<h2 style="margin-top:2rem">Favorite horror films</h2><ul class="films"><li>The Thing (1982)</li><li>Alien (1979)</li><li>Suspiria (1977)</li><li>Hereditary (2018)</li><li>The Shining (1980)</li></ul></div></section>
+</div>
+<div class="page wrap" id="resume">
+<h1 class="page-title">Resume</h1><p class="lede">The credits so far.</p>
+<section><h2>Experience</h2><article class="credit"><div class="when">2024 – Present</div><div><h3>Video Editor</h3><p>Company or Freelance</p><p>One line on what you cut and the results.</p></div></article><article class="credit"><div class="when">2022 – 2024</div><div><h3>Job Title</h3><p>Company</p><p>One line on what you did.</p></div></article><article class="credit"><div class="when">2018 – 2022</div><div><h3>Degree or School</h3><p>School name</p><p>Film, art or media studies.</p></div></article></section>
+<section><h2>Skills</h2><ul class="skills"><li>Premiere Pro</li><li>DaVinci Resolve</li><li>After Effects</li><li>Sound design</li><li>Illustration</li></ul></section>
+<a class="btn solid" href="resume.pdf">Download PDF</a>
+</div>
+<div class="page wrap" id="contact">
+<h1 class="page-title">Contact</h1><p class="lede">Have a project in mind? Send it my way.</p>
+<a class="email" href="mailto:you@example.com">you@example.com</a>
+<ul class="links"><li><a href="https://github.com/your-username">GitHub</a></li><li><a href="https://www.instagram.com/your-username">Instagram</a></li><li><a href="https://www.youtube.com/@your-username">YouTube</a></li><li><a href="https://www.linkedin.com/in/your-username">LinkedIn</a></li></ul>
+</div>
+</main>
+<footer class="strip"><p>© 2026 Your Name. Best viewed in the dark.</p></footer>
+<script>
+const ids=['home', 'editing', 'art', 'about', 'resume', 'contact'],names={"home":"Home","editing":"Editing","art":"Art","about":"About Me","resume":"Resume","contact":"Contact"};
+function show(){let id=location.hash.slice(1);if(!ids.includes(id))id="home";
+ids.forEach(i=>document.getElementById(i).hidden=i!==id);
+document.querySelectorAll("nav a").forEach(a=>a.getAttribute("href")==="#"+id?a.setAttribute("aria-current","page"):a.removeAttribute("aria-current"));
+document.title=(id==="home"?"":names[id]+" – ")+"Your Name";window.scrollTo(0,0)}
+addEventListener("hashchange",show);show();
+</script>
+</body>
+</html>
